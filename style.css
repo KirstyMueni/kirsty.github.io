@@ -137,3 +137,24 @@ footer {
   line-height: 1.5;
   color: #ccc;
 }
+/* Reduce space between the "About Me" and "Skills" sections */
+section {
+  padding-top: 20px;    /* Lowered from default */
+  padding-bottom: 20px; /* Lowered from default */
+}
+
+/* Reduce space specifically between the Title and the Boxes */
+h2 {
+  margin-bottom: 15px;  /* Tightens the gap under the "Skills & Expertise" text */
+}
+
+/* Reduce the space between the boxes themselves */
+.skills-grid {
+  gap: 15px;            /* Decreasing this makes boxes sit closer together */
+  padding: 10px 0;      /* Reduces vertical padding of the grid area */
+}
+
+/* Reduce internal padding inside each box */
+.skill-card {
+  padding: 15px;        /* Makes the boxes more compact */
+}
