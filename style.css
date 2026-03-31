@@ -94,3 +94,46 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Container Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #000; /* Matching your dark background */
+}
+
+/* Individual Boxes */
+.skill-card {
+  background: #1a1a1a;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: all 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+}
+
+/* Hover Effect: Box lifts up and glows slightly */
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: #00bcd4; /* Cyan color from your headers */
+  box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+}
+
+/* Click Effect (Active State) */
+.skill-card:active {
+  transform: scale(0.98);
+}
+
+/* Text Styling */
+.skill-card h3 {
+  color: #00bcd4;
+  margin: 15px 0 10px 0;
+}
+
+.skill-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+}
