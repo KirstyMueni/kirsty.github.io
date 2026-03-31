@@ -1,8 +1,19 @@
+/* 1. VARIABLES & CORE */
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --accent: #00bcd4;
+  --accent-hover: #38bdf8;
+  --text-main: #e2e8f0;
+  --text-dim: #94a3b8;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background: #0f172a;
-  color: #e2e8f0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
 .container {
@@ -11,35 +22,45 @@ body {
   padding: 0 20px;
 }
 
-/* HERO & BUTTONS */
+/* 2. HERO SECTION */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 0 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-subtext {
+  color: var(--text-dim);
+  margin: 15px 0 30px;
 }
 
 .button-group {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .btn-main {
-  background: #00bcd4;
+  background: var(--accent);
   color: #000;
-  padding: 12px 24px;
-  border-radius: 5px;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .btn-main:hover {
+  background: var(--accent-hover);
   transform: translateY(-3px);
-  background: #008ba3;
+  box-shadow: 0 8px 15px rgba(0, 188, 212, 0.3);
 }
 
-/* SKILLS GRID (3 PER ROW) */
+/* 3. SKILLS GRID (FORCED 3 PER ROW) */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -48,22 +69,26 @@ body {
 }
 
 .skill-card {
-  background: #1e293b;
+  background: var(--bg-card);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid #334155;
   text-align: center;
-  transition: 0.3s ease;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px);
-  border-color: #00bcd4;
-  box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-8px);
 }
 
-/* PROJECT GALLERY (Button-style cards) */
+.skill-card .icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* 4. PROJECT GALLERY BUTTONS */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -71,28 +96,28 @@ body {
 }
 
 .project-btn {
-  background: #1e293b;
-  padding: 20px;
-  border: 1px solid #334155;
-  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 10px;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  border: 2px solid transparent;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-btn:hover {
-  background: #38bdf8;
-  color: #000;
+  background: #000;
+  color: var(--accent);
+  border-color: var(--accent);
   transform: scale(1.05);
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 850px) {
+/* 5. RESPONSIVENESS */
+@media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .skills-grid, .button-group { flex-direction: column; grid-template-columns: 1fr; }
-  .btn-main { width: 90%; text-align: center; }
-}
+  .skills-grid { grid-template-columns: 1fr; }
+  .button-group { flex-direction: column; align-items
