@@ -3,28 +3,37 @@ body {
   margin: 0;
   background: #0f172a;
   color: #e2e8f0;
+  line-height: 1.6;
 }
 
-/* HERO */
+/* THE "FIX": This centers everything and stops the wideness */
+.container {
+  max-width: 1000px; /* Limits width */
+  margin: 0 auto;    /* Centers the box */
+  padding: 0 20px;   /* Padding for mobile */
+}
+
+/* HERO SECTION */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px; /* Reduced padding to save space */
   background: #1e293b;
 }
 
 h1 {
   font-size: 45px;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
-/* Container to align them horizontally */
+/* BUTTONS */
 .button-group {
   display: flex;
   justify-content: center; 
-  gap: 15px;               
+  gap: 15px;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+  margin-top: 20px;
 }
 
-/* The Button Styling */
 .btn-main {
   background-color: #00bcd4; 
   color: #000;              
@@ -32,123 +41,74 @@ h1 {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: all 0.2s ease;
   display: inline-block;
 }
 
-/* Hover effect for all three */
 .btn-main:hover {
-  background-color: #008ba3; /* Slightly darker cyan */
+  background-color: #008ba3;
   transform: translateY(-2px);
 }
+
+/* HEADINGS */
 h2 {
   color: #38bdf8;
+  margin-bottom: 15px;
 }
 
-/* Container Layout */
+/* SKILLS GRID - FIXED */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background-color: #000; /* Matching your dark background */
-}
-{
-  display: inline-block; 
-  width: auto;          
-}
- .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 350px)); 
+  /* Fixed columns: they stay between 280px and 350px wide */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px)); 
   justify-content: center; 
-  gap: 20px;
+  gap: 15px;            
+  padding: 20px 0;
 }
 
-/* Individual Boxes */
+/* SKILL CARDS */
 .skill-card {
   background: #1a1a1a;
   color: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   border: 1px solid #333;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-/* Hover Effect: Box lifts up and glows slightly */
 .skill-card:hover {
   transform: translateY(-10px);
-  border-color: #00bcd4; /* Cyan color from your headers */
+  border-color: #00bcd4;
   box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
 }
 
-/* Click Effect (Active State) */
-.skill-card:active {
-  transform: scale(0.98);
-}
-
-/* Text Styling */
-.skill-card h3 {
-  color: #00bcd4;
-  margin: 15px 0 10px 0;
-}
-
-.skill-card p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #ccc;
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  
+  .hero {
+    padding: 40px 15px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-main {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background: #1e293b;
+  margin-top: 40px;
 }
 
-/* ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-}
-/* Reduce space between the "About Me" and "Skills" sections */
-section {
-  padding-top: 20px;    /* Lowered from default */
-  padding-bottom: 20px; /* Lowered from default */
-}
-
-/* Reduce space specifically between the Title and the Boxes */
-h2 {
-  margin-bottom: 15px;  
-}
-
-/* Reduce the space between the boxes themselves */
-.skills-grid {
-  gap: 15px;            
-  padding: 10px 0;     
-}
-
-/* Reduce internal padding inside each box */
-.skill-card {
-  padding: 15px;       
-}
