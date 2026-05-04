@@ -25,7 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add your image filenames here. Make sure they match your 'images' folder exactly!
 const projectData = {
     "CyberSecurity": [
-        "images/cisco-ethical-hacker-cert.jpg", 
+        "images/cisco-ethical-hacker-cert.jpg.png", 
         "images/ctf-win-01.png",
         "images/nmap-report.png"
     ],
