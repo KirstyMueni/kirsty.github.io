@@ -100,18 +100,7 @@ h1 {
     transform: scale(1.03);
 }
 
-.skills-card ul {
-    text-align: left;       /* Aligns the text to the left */
-    display: inline-block;  /* Keeps the list block centered in the card */
-    list-style-position: inside; /* Ensures bullets stay with the text */
-    padding: 0;
-}
-
-.skills-card li {
-    margin-bottom: 8px;     /* Adds a little breathing room between skills */
-}
-
-/* 4. PROJECT GALLERY BUTTONS */
+GALLERY BUTTONS */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
