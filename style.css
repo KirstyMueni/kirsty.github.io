@@ -186,6 +186,14 @@ h1 {
     background: #00d4ff;
     color: #000;
 }
+/* Tablet & Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .project-grid-six { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .project-grid-six { grid-template-columns: 1fr; }
+}
 /* 5. RESPONSIVENESS */
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
