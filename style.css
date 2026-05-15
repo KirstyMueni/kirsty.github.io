@@ -227,6 +227,70 @@ GALLERY BUTTONS */
     .project-grid-six { grid-template-columns: 1fr; }
 }
 
+/* 1. Base Card Setup */
+.project-card {
+    background: #121212; 
+    border-radius: 12px;
+    overflow: hidden; /* CRITICAL: This hides the info until hover */
+    position: relative;
+    border: 1px solid #2a2a2a;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth "pop" effect */
+    height: 350px; /* Uniform height for the 3x2 grid */
+}
+
+/* 2. Image Zoom Effect */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1); /* Slight zoom in */
+    opacity: 0.4;         /* Dims image so text is readable */
+}
+
+/* 3. The Interactive Info Slide-Up */
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9) 20%);
+    transform: translateY(60px); /* Sits slightly lower initially */
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0); /* Slides up into view */
+}
+
+/* 4. The Cyber Glow Border */
+.project-card:hover {
+    border-color: #00d4ff; 
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+}
+
+/* 5. Button Interaction */
+.btn-small {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #00d4ff;
+    color: #000;
+}
+
 /* 5. RESPONSIVENESS */
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
