@@ -170,7 +170,16 @@ h1 {
 @media (max-width: 768px) {
     .project-grid-six { grid-template-columns: 1fr; }
 }
+.container {
+    max-width: 1100px; /* Limits how wide the content can get */
+    margin: 0 auto;    /* Centers the container on the page */
+    padding: 0 20px;   /* Adds a small "safety gap" so text doesn't touch the edge on mobile */
+}
 
+.contact-section {
+    text-align: left; /* Keep this 'left' if you want the text aligned like your About section */
+    padding: 60px 0;
+}
 /* 5. RESPONSIVENESS */
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
