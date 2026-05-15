@@ -252,26 +252,27 @@ h1 {
     color: #000;
 }
 
-/* Tighten the bottom of the Skills section */
+/* Remove space from the bottom of Skills */
 .skills-expertise-section {
     padding-top: 60px;
-    padding-bottom: 10px; /* Reduced from 60px/80px */
+    padding-bottom: 0px !important; /* !important forces the change */
+    margin-bottom: 0px !important;
 }
 
-/* Tighten the top of the Project Gallery section */
+/* Remove space from the top of Project Gallery */
 .project-gallery-section {
-    padding-top: 10px;    /* Reduced from 60px/80px */
-    padding-bottom: 60px;
+    padding-top: 0px !important;    /* !important forces the change */
+    margin-top: 0px !important;
     background: transparent;
 }
 
-/* Center the Gallery Title and remove its default top margin */
+/* Target the Project Gallery Title specifically */
 .project-gallery-section h2 {
     text-align: center;
-    margin-top: 0; 
-    margin-bottom: 40px;
+    margin-top: 0px !important;    /* Removes the default space above the title */
+    padding-top: 10px;             /* Adds just a tiny bit of breathing room */
+    margin-bottom: 30px;
 }
-
 .container {
     max-width: 1100px;
     margin: 0 auto;    
