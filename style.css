@@ -100,17 +100,23 @@ h1 {
     transform: scale(1.03);
 }
 
-/* --- PROJECT GALLERY: FULL REPLACEMENT CODE --- */
-
+/* Project Gallery Styles */
 .project-gallery-section {
     padding: 80px 0;
-    background: transparent; /* Matches your main portfolio background */
+    background-color: transparent; /* Removes the black section background */
     color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
 }
 
 .project-grid-six {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces the 3x2 layout on desktop */
+    /* Forces 3 columns on desktop */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -118,23 +124,19 @@ h1 {
 }
 
 .project-card {
-    background: #111111; /* Matches your Skills & Expertise card color */
+    background: #121212; /* Matches your Skills & Expertise card color */
     border-radius: 12px;
-    overflow: hidden; /* Keeps the zoom effect inside the card boundaries */
-    position: relative;
-    border: 1px solid #222;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
-/* Image Zoom & Fade on Hover */
 .project-image {
     width: 100%;
     height: 180px;
     background: #000;
-    overflow: hidden;
 }
 
 .project-image img {
@@ -142,33 +144,127 @@ h1 {
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.1); /* Zoom effect */
-    opacity: 1; /* Brightens on hover */
-}
-
-/* Info Section & Hover Lift */
 .project-info {
     padding: 20px;
     flex-grow: 1;
 }
 
-.project-card:hover {
-    transform: translateY(-10px); /* Lifts the card up */
-    border-color: #00d4ff; /* Adds the cyber-blue glow */
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+.project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
-/* Responsive Rules for Tablet and Mobile */
+.project-info p {
+    font-size: 0.9rem;
+    color: #bbb;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    font-size: 0.7rem;
+    background: #1e1e1e;
+    color: #00d4ff; /* Cyber blue accent */
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    border: 1px solid #333;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Interaction */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff;
+}
+
+/* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
     .project-grid-six { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
     .project-grid-six { grid-template-columns: 1fr; }
+}
+/* 1. Base Card Setup */
+.project-card {
+    background: #121212; 
+    border-radius: 12px;
+    overflow: hidden; /* CRITICAL: This hides the info until hover */
+    position: relative;
+    border: 1px solid #2a2a2a;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth "pop" effect */
+    height: 350px; /* Uniform height for the 3x2 grid */
+}
+
+/* 2. Image Zoom Effect */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1); /* Slight zoom in */
+    opacity: 0.4;         /* Dims image so text is readable */
+}
+
+/* 3. The Interactive Info Slide-Up */
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9) 20%);
+    transform: translateY(60px); /* Sits slightly lower initially */
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(0); /* Slides up into view */
+}
+
+/* 4. The Cyber Glow Border */
+.project-card:hover {
+    border-color: #00d4ff; 
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+}
+
+/* 5. Button Interaction */
+.btn-small {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #00d4ff;
+    color: #000;
 }
 .container {
     max-width: 1100px;
