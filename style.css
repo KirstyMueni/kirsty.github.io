@@ -100,17 +100,17 @@ h1 {
     transform: scale(1.03);
 }
 
-/* --- PROJECT GALLERY */
+/* --- PROJECT GALLERY: FULL REPLACEMENT CODE --- */
 
 .project-gallery-section {
     padding: 80px 0;
-    background: transparent; 
+    background: transparent; /* Matches your main portfolio background */
     color: #fff;
 }
 
 .project-grid-six {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /* Forces the 3x2 layout on desktop */
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -118,9 +118,9 @@ h1 {
 }
 
 .project-card {
-    background: #111111; 
+    background: #111111; /* Matches your Skills & Expertise card color */
     border-radius: 12px;
-    overflow: hidden; 
+    overflow: hidden; /* Keeps the zoom effect inside the card boundaries */
     position: relative;
     border: 1px solid #222;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -163,11 +163,11 @@ h1 {
 }
 
 /* Responsive Rules for Tablet and Mobile */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .project-grid-six { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width:  600px) {
+@media (max-width: 768px) {
     .project-grid-six { grid-template-columns: 1fr; }
 }
 .container {
