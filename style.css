@@ -125,6 +125,62 @@ GALLERY BUTTONS */
     transform: scale(1.05);
 }
 
+/* LET'S CONNECT SECTION */
+
+#contact {
+  padding: 90px 10%;
+  background: #0b1220;
+  color: white;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.contact-text {
+  max-width: 750px;
+  margin: auto;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-btn:hover {
+  background: #38bdf8;
+  color: #0b1220;
+  transform: translateY(-3px);
+}
+
+.primary-btn {
+  background: #38bdf8;
+  color: #0b1220;
+}
+
+.primary-btn:hover {
+  background: #0ea5e9;
+}
+
 /* 5. RESPONSIVENESS */
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
