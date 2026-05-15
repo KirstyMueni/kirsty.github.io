@@ -106,16 +106,15 @@ GALLERY BUTTONS */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
-
-/* Project Gallery Section */
 .project-gallery-section {
     padding: 80px 0;
-    background: transparent;
+    background-color: transparent; /* No black background; blends with site */
     color: #fff;
 }
 
 .project-grid-six {
     display: grid;
+    /* This creates the 3-column layout */
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     max-width: 1200px;
@@ -123,33 +122,19 @@ GALLERY BUTTONS */
     padding: 0 20px;
 }
 
-
 .project-card {
-    background: #111111; 
-    border-radius: 12px;
+    background: #121212; /* Matches your Skills card color */
+    border-radius: 10px;
     overflow: hidden;
-    position: relative;
-    border: 1px solid #222; 
-    transition: all 0.4s ease;
-    height: 100%; 
+    border: 1px solid #2a2a2a; /* Subtle border */
+    transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
-/* Hover Interactivity */
-.project-card:hover {
-    transform: translateY(-10px);
-    border-color: #00d4ff; /* Cyber blue glow */
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
-}
-
-.project-info {
-    padding: 20px;
-    background: transparent; /* Ensures no nested black boxes */
-}
 .project-image {
     width: 100%;
-    height: 180px;
+    height: 180px; /* Slightly shorter for a 3-column look */
     background: #000;
 }
 
@@ -168,52 +153,29 @@ GALLERY BUTTONS */
 .project-info h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .project-info p {
     font-size: 0.9rem;
     color: #bbb;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .project-tags span {
     font-size: 0.7rem;
     background: #1e1e1e;
-    color: #00d4ff; /* Cyber blue accent */
     padding: 4px 10px;
     border-radius: 4px;
     margin-right: 5px;
     border: 1px solid #333;
 }
 
-.btn-small {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn-small:hover {
-    background: #fff;
-    color: #000;
-}
-
-/* Interaction */
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: #00d4ff;
-}
-
-/* Tablet & Mobile Responsiveness */
+/* Responsive: 2 columns on tablets, 1 column on phones */
 @media (max-width: 1024px) {
     .project-grid-six { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 768px) {
     .project-grid-six { grid-template-columns: 1fr; }
 }
