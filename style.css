@@ -100,21 +100,22 @@ h1 {
     transform: scale(1.03);
 }
 
-GALLERY BUTTONS */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
+/* Project Gallery Styles */
 .project-gallery-section {
     padding: 80px 0;
-    background-color: transparent; /* No black background; blends with site */
+    background-color: transparent; /* Removes the black section background */
     color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
 }
 
 .project-grid-six {
     display: grid;
-    /* This creates the 3-column layout */
+    /* Forces 3 columns on desktop */
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     max-width: 1200px;
@@ -123,10 +124,10 @@ GALLERY BUTTONS */
 }
 
 .project-card {
-    background: #121212; /* Matches your Skills card color */
-    border-radius: 10px;
+    background: #121212; /* Matches your Skills & Expertise card color */
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #2a2a2a; /* Subtle border */
+    border: 1px solid #2a2a2a;
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -134,7 +135,7 @@ GALLERY BUTTONS */
 
 .project-image {
     width: 100%;
-    height: 180px; /* Slightly shorter for a 3-column look */
+    height: 180px;
     background: #000;
 }
 
@@ -153,29 +154,52 @@ GALLERY BUTTONS */
 .project-info h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
-    color: #fff;
 }
 
 .project-info p {
     font-size: 0.9rem;
     color: #bbb;
     line-height: 1.5;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .project-tags span {
     font-size: 0.7rem;
     background: #1e1e1e;
+    color: #00d4ff; /* Cyber blue accent */
     padding: 4px 10px;
     border-radius: 4px;
     margin-right: 5px;
     border: 1px solid #333;
 }
 
-/* Responsive: 2 columns on tablets, 1 column on phones */
+.btn-small {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Interaction */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff;
+}
+
+/* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
     .project-grid-six { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
     .project-grid-six { grid-template-columns: 1fr; }
 }
