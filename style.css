@@ -251,6 +251,27 @@ h1 {
     background: #00d4ff;
     color: #000;
 }
+
+/* Tighten the bottom of the Skills section */
+.skills-expertise-section {
+    padding-top: 60px;
+    padding-bottom: 10px; /* Reduced from 60px/80px */
+}
+
+/* Tighten the top of the Project Gallery section */
+.project-gallery-section {
+    padding-top: 10px;    /* Reduced from 60px/80px */
+    padding-bottom: 60px;
+    background: transparent;
+}
+
+/* Center the Gallery Title and remove its default top margin */
+.project-gallery-section h2 {
+    text-align: center;
+    margin-top: 0; 
+    margin-bottom: 40px;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;    
