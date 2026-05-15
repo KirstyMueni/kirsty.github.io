@@ -277,6 +277,52 @@ h2 {
     padding-top: 10px;             /* Adds just a tiny bit of breathing room */
     margin-bottom: 30px;
 }
+
+/* 1. Tighten the bottom of the Hero Section */
+.hero-section {
+    padding-bottom: 20px !important; /* Reduced from 80px or 100px */
+    margin-bottom: 0px !important;
+}
+
+/* 2. Tighten the top of the About Me Section */
+.about-me-section {
+    padding-top: 20px !important;   /* Reduced from 80px or 60px */
+    margin-top: 0px !important;
+}
+
+/* 3. Ensure the container isn't adding extra space */
+.hero-section .container, 
+.about-me-section .container {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* 1. Tighten the bottom of the Project Gallery */
+.project-gallery-section {
+    padding-top: 0px !important;    
+    padding-bottom: 20px !important; /* Reduced space below projects */
+    margin-bottom: 0px !important;
+    background: transparent;
+}
+
+/* 2. Tighten the top of the Let's Connect section */
+.contact-section {
+    padding-top: 10px !important;    /* Reduced space above "Let's Connect" */
+    margin-top: 0px !important;
+}
+
+/* 3. Force the headings to have zero extra top space */
+.project-gallery-section h2, 
+.contact-section h2 {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+/* 4. Ensure the last row of project cards isn't pushing the footer away */
+.project-grid-six {
+    margin-bottom: 10px !important;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;    
