@@ -32,7 +32,10 @@ h1 {
   font-size: 3rem;
   margin: 0;
 }
-
+ h3 
+{
+   font-size: 2.5rem;
+}
 .hero-subtext {
   color: var(--text-dim);
   margin: 15px 0 30px;
